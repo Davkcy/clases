@@ -1,49 +1,42 @@
-#include "cdate.h"
+#include "clases.h"
 #include <iostream>
+#include <string>
 using namespace std;
-
 int main() {
-	Date fecha1;
-	Date fecha2;
-	Date fecha3;
-	
-	fecha1.setYear(2020);
-	fecha1.setMonth(1);
-	fecha1.setDay(3);
-	
-	fecha2.setYear(2019);
-	fecha2.setMonth(14);
-	fecha2.setDay(15);
-	
-	fecha3.setYear(1500);
-	fecha3.setMonth(12);
-	fecha3.setDay(20);
-	
-	/*
-	cout << "Ingrese el año: ";
-	int yea;
-	cin >> yea;
-	fechas.setYear(yea);
-	
-	cout << "Ingrese el mes: ";
-	int mon;
-	cin >> mon;
-	fechas.setMonth(mon);
-	
-	cout << "Ingrese el dia: ";
-	int day;
-	cin >> day;
-	fechas.setDay(day);
-	*/
-	fecha1.displayDate();
-	
-	fecha2.displayDate();
-	
-	fecha3.displayDate();
-	
-	/*
-	if (fechas.isLeapYear()){
-	cout << "El año es bisiesto" << endl;
-	}
-	*/
+  Student num1;
+  Student num2;
+
+  cout << "Ingrese el nombre del estudiante 1: " << endl;
+  string named;
+  getline(cin, named);
+  num1.setName(named);
+  cout << "Ingrese la edad del estudiante 1: " << endl;
+  int agee;
+  cin >> agee;
+  num1.setAge(agee);
+  cin.ignore();
+
+  cout << "Ingrese el nombre del estudiante 2: " << endl;
+  string nombre;
+  getline(cin, nombre);
+  num2.setName(nombre);
+
+  cout << "Ingrese la edad del estudiante 2: " << endl;
+  int agee2;
+  cin >> agee2;
+  num2.setAge(agee2);
+
+  cout << "Estudiante N01 :" << endl;
+  cout << "Su nombre es : " << num1.getName() << endl;
+  cout << "Su edad es : " << num1.getAge() << endl;
+  if (num1.isOlder()) {
+    cout << "El estudiante es mayor de edad" << endl;
+  }
+
+  cout << "Estudiante N02 :" << endl;
+  cout << "Su nombre es : " << num2.getName() << endl;
+  cout << "Su edad es : " << num2.getAge() << endl;
+  if (num2.isOlder()) {
+    cout << "El estudiante 2 es mayor de edad" << endl;
+  }
 }
